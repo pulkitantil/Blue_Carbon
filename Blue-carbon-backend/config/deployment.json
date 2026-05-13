@@ -1,0 +1,17 @@
+{
+  "network": "hardhat",
+  "chainId": "31337",
+  "deployedAt": "2026-04-18T13:36:06.776Z",
+  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "contracts": {
+    "BlueCarbonRegistry": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "BlueCarbonCredit": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "CreditIssuanceManager": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+  },
+  "roles": {
+    "VERIFIER_ROLE": "0x0ce23c3e399818cfee81a7ab0880f714e53d7672b08df0fa62f2843416e1ea09",
+    "AUDITOR_ROLE": "0x59a1c48e5837ad7a7f3dcedcbe129bf3249ec4fbf651fd4f5e2600ead39fe2f5",
+    "MINTER_ROLE": "0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6",
+    "ISSUER_ROLE": "0x114e74f6ea3bd819998f78687bfcb11b140da08e9b7d222fa9c1f1ba1f2aa122"
+  }
+}

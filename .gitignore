@@ -1,0 +1,11 @@
+node_modules/
+.env
+config/deployment.json
+config/addresses.env
+cache/
+artifacts/
+uploads/
+*.log
+.DS_Store
+coverage/
+typechain-types/

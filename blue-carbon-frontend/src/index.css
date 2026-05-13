@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-dark-500 text-slate-100 font-sans;
+    background-image: linear-gradient(rgba(0,191,174,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0,191,174,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-dark-500; }
+  ::-webkit-scrollbar-thumb { @apply bg-dark-200 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-ocean-700; }
+}
+
+@layer components {
+  .glass {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 191, 174, 0.15);
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-6;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  .btn-primary {
+    @apply px-6 py-2.5 bg-ocean-500 hover:bg-ocean-400 text-dark-500 font-semibold rounded-xl
+           transition-all duration-200 flex items-center gap-2 text-sm;
+    box-shadow: 0 0 20px rgba(0,191,174,0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0,191,174,0.5);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 bg-transparent border border-ocean-500/40 hover:border-ocean-400
+           text-ocean-400 hover:text-ocean-300 font-medium rounded-xl
+           transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 text-slate-400 hover:text-slate-200 hover:bg-dark-400
+           rounded-lg transition-all duration-150 text-sm font-medium;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-400 border border-dark-200/50 focus:border-ocean-500/60
+           rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 text-sm
+           outline-none transition-all duration-200;
+  }
+
+  .input-field:focus {
+    box-shadow: 0 0 0 3px rgba(0,191,174,0.1);
+  }
+
+  .label {
+    @apply block text-xs font-medium text-slate-400 uppercase tracking-wider mb-2;
+  }
+
+  .badge-green {
+    @apply px-2.5 py-1 bg-ocean-900/50 text-ocean-300 border border-ocean-500/30
+           rounded-full text-xs font-medium;
+  }
+
+  .badge-yellow {
+    @apply px-2.5 py-1 bg-amber-900/30 text-amber-300 border border-amber-500/30
+           rounded-full text-xs font-medium;
+  }
+
+  .badge-red {
+    @apply px-2.5 py-1 bg-red-900/30 text-red-300 border border-red-500/30
+           rounded-full text-xs font-medium;
+  }
+
+  .badge-blue {
+    @apply px-2.5 py-1 bg-blue-900/30 text-blue-300 border border-blue-500/30
+           rounded-full text-xs font-medium;
+  }
+
+  .stat-card {
+    @apply glass-card flex flex-col gap-1;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-slate-400 hover:text-ocean-300 rounded-lg
+           transition-all duration-150 text-sm font-medium flex items-center gap-2;
+  }
+
+  .nav-link.active {
+    @apply text-ocean-300 bg-ocean-900/20;
+  }
+
+  .page-title {
+    @apply text-3xl font-bold text-slate-100 mb-1;
+  }
+
+  .page-subtitle {
+    @apply text-slate-400 text-sm mb-8;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-slate-200 mb-4;
+  }
+
+  .divider {
+    @apply border-t border-dark-300/50 my-6;
+  }
+
+  .hash {
+    @apply font-mono text-xs text-ocean-400 bg-ocean-900/20 px-2 py-1 rounded-lg;
+  }
+
+  .tx-link {
+    @apply font-mono text-xs text-ocean-400 hover:text-ocean-300 underline underline-offset-2;
+  }
+
+  .table-header {
+    @apply text-xs font-medium text-slate-500 uppercase tracking-wider pb-3;
+  }
+
+  .table-row {
+    @apply border-t border-dark-300/30 py-4;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #00bfae, #7dddd2, #45cdbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glow {
+    border-color: rgba(0,191,174,0.4);
+    box-shadow: 0 0 15px rgba(0,191,174,0.15);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
